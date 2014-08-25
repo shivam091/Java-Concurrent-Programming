@@ -23,6 +23,7 @@ class Process extends Thread {
 		try {
 			sleep(random(500));
 		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -35,9 +36,9 @@ class Process extends Thread {
 	}
 	
 	private void critical() {
-		System.out.println(id + " entering critical section");
+		System.out.println(id + " is entering critical section.");
 		busy();
-		System.out.println(id + " leaving critical section");
+		System.out.println(id + " is leaving critical section.");
 	}
 
 	private void post_protocol() {
