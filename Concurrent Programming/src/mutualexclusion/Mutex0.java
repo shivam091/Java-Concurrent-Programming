@@ -7,11 +7,11 @@ package mutualexclusion;
  * 
  */
 
-class process extends Thread {
+class Process extends Thread {
 
 	private int id;
 	
-	public process(int i) {
+	public Process(int i) {
 		id = i;
 	}
 
@@ -57,10 +57,10 @@ public class Mutex0 {
 	static int N = 3; // Number of processes participating.
 
 	public static void main(String[] args) {
-		process p[] = new process[N];
+		Process p[] = new Process[N];
 		// Configure and start processes p[0] ... p[N-1]
 		for (int i = 0; i < N; i++) {
-			p[i] = new process(i);
+			p[i] = new Process(i);
 			p[i].start();
 		}
 	}
