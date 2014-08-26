@@ -15,3 +15,9 @@ This repository contains classes for concurrent programming.
 
 * Language constructs and models:- 
     Here we introduce semaphores, asynchronous message passing, the rendezvous, critical regions, and monitors.
+
+
+##Downloads
+
+Source is hosted at the [Java-Concurrent-Programming GitHub repository](https://github.com/shivam091/Java-Concurrent-Programming/). 
+Downloads are also available on the [GitHub project's Downloads section] (https://github.com/shivam091/Java-Concurrent-Programming/downloads)
