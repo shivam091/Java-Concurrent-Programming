@@ -1,8 +1,10 @@
 package mutualexclusion;
 
 /**
- * Busy waiting attempts to solve mutual exclusion problem with no synchronization. When program is run, critical sections
- * will overlap as there is no pre and post protocol.
+ * Busy waiting attempts to solve mutual exclusion problem with no
+ * synchronization. When program is run, critical sections will overlap as there
+ * is no pre and post protocol.
+ * 
  * @author shivam
  * 
  */
@@ -10,7 +12,7 @@ package mutualexclusion;
 class Process extends Thread {
 
 	private int id;
-	
+
 	public Process(int i) {
 		id = i;
 	}
@@ -28,17 +30,17 @@ class Process extends Thread {
 	}
 
 	private void non_critical() {
-		System.out.println(id + " is NON critical");
+		System.out.println("Process " + id + " is NON critical");
 		busy();
 	}
 
 	private void pre_protocol() {
 	}
-	
+
 	private void critical() {
-		System.out.println(id + " is entering critical section.");
+		System.out.println("Process " + id + " is entering critical section.");
 		busy();
-		System.out.println(id + " is leaving critical section.");
+		System.out.println("Process " + id + " is leaving critical section.");
 	}
 
 	private void post_protocol() {

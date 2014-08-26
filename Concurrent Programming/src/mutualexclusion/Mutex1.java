@@ -1,9 +1,11 @@
 package mutualexclusion;
 
 /**
- * Busy waiting attempts to solve the mutual exclusion problem using a `turn' variable to 
- * ensure mutual exclusion, and a while (true) {...} loop for being busy. This is the first attempt at solving Mutual
- * Exclusion Problem using a 'turn' variable as a baton.
+ * Busy waiting attempts to solve the mutual exclusion problem using a `turn'
+ * variable to ensure mutual exclusion, and a while (true) {...} loop for being
+ * busy. This is the first attempt at solving Mutual Exclusion Problem using a
+ * 'turn' variable as a baton.
+ * 
  * @author shivam
  *
  */
@@ -30,14 +32,14 @@ class Process1 extends Thread {
 	}
 
 	private void non_critical() {
-		System.out.println(id + " is NON critical");
+		System.out.println("Process " + id + " is NON critical");
 		busy();
 	}
 
 	private void critical() {
-		System.out.println(id + " is entering critical section.");
+		System.out.println("Process " + id + " is entering critical section.");
 		busy();
-		System.out.println(id + " is leaving critical section.");
+		System.out.println("Process " + id + " is leaving critical section.");
 	}
 
 	private void pre_protocol() {
@@ -62,7 +64,7 @@ class Process1 extends Thread {
 
 public class Mutex1 {
 	static int N = 2; // Number of processes.
-	
+
 	public static void main(String[] args) {
 		Process1 p[] = new Process1[N];
 		// Configure and start processes.
