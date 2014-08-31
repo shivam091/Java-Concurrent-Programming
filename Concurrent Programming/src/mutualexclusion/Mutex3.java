@@ -1,11 +1,5 @@
 package mutualexclusion;
 
-//CS237 - Busy waiting example 3
-//==============================
-//Third attempt at solving the MEP
-//using a `flag of intention' approach.
-//This is safe, but overly so!
-
 /**
  * Third attempt to solve Mutual Exclusion Problem using a flag of intension
  * approach. This approach is overly safe.
